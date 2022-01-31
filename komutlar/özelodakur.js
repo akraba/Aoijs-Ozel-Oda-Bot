@@ -8,6 +8,7 @@ module.exports = {
   $modifyChannelPerms[$get[kanal];+connect;+speak;$authorID]
   $modifyChannelPerms[$get[kanal];-connect;$guildID]
   $let[kanal;$createChannel[$message;voice;yes;$getServerVar[kategori]]]
+  $onlyIf[$message!=;❎ Özel odanızın adını girin.]
   $onlyIf[$voiceID==$getServerVar[kanal];❎ <#$getServerVar[kanal]> Adlı ses kanalına girip tekrar dene.]
   $onlyIf[$getServerVar[kanal]!=;❎ Kanal ayarlayın]
   $onlyIf[$getServerVar[kategori]!=;❎ Kategori ayarlayın]
