@@ -11,13 +11,13 @@ $endif
 
 $if[$message[1]==kanal]
 ✅ Özel oda kanalı **$channelName[$message[2]]** olarak ayarlandı!
-$setServerVar[seskanalı;$message[2]]
+$setServerVar[kanal;$message[2]]
 $onlyIf[$channelType[$message[2]]==voice;❎ Bu bir ses kanalı değil.]
 $onlyIf[$channelExists[$message[2]]==true;❎ Böyle bir ses kanalı yok.]
 $onlyIf[$message[2]!=;❎ Ses kanalı ID'si girin.]
 $endif
 
-$if[$message[1]==kapat
+$if[$message[1]==kapat]
 ✅ Özel oda sistemi kapatıldı!
 $setServerVar[kategori;]
 $setServerVar[kanal;]
